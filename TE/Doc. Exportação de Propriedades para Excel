@@ -1,6 +1,6 @@
 // Export properties for the currently selected objects:
 var tsv = ExportProperties(Selected);
 var tsv2 = ExportProperties(
-//SaveFile(@"C:\Users\99736820\Desktop\Teste de Exportacao de Medidas\Exported Properties 7.tsv", tsv);
+//SaveFile(@"C:\Users\Eudes\Desktop\Teste de Exportacao de Medidas\Exported Properties.tsv", tsv);
 
 tsv.Output()
