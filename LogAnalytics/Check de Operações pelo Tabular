@@ -1,0 +1,5 @@
+PowerBIDatasetsWorkspace
+| where ArtifactName in ('Dataset Central')
+| where ApplicationName  contains "Tabular"
+| project TimeGenerated, OperationName, ArtifactId, CorrelationId,XmlaRequestId, ApplicationName, ArtifactName, LogAnalyticsCategory, User,OperationDetailName, XmlaSessionId, Level, Status, EventText
+|order by TimeGenerated desc 

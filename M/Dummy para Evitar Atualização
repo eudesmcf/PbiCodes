@@ -1,0 +1,5 @@
+let
+    Source = Sql.Database("Server", "Banco"),
+    #"Navigation 1" = Source{[Schema="esquema",Item="tabela/view"]}[Data],
+    // Caso a tabela de origem venha vazia, vamos substituir por uma tabela dummy para provocar um erro e evitar que o BI atualize com dados vazios
+    teste_linhas = if Table.RowCount(#"Navigation 1") = 0 then Table.FromRecords({[CustomerID = 1, Name = "Bob", Phone = "123-4567"]}) else #"Navigation 1",
